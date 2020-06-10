@@ -8,7 +8,6 @@
 function toggle_img_on(this_) 
 {
     
-    alert(this_.value) ; 
      document.getElementById("dowload_img").className="dowload_img_display_block";
     var identite = new FormData();
     // Ajout d'information dans l'objet
