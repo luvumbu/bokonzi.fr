@@ -1,0 +1,140 @@
+.bkz-header-home,
+.bkz-header-menu
+{
+ display:none ;  
+}
+.bkz-flex-mod0
+{
+ background-color:#444444 ; 
+ display:flex; 
+ justify-content: space-between;  
+ border-bottom:2px solid rgba(0,0,0,0.3) ; 
+ color:white ; 
+ text-shadow:2px 2px 2px rgba(0,0,0,0.4);
+}
+.bkz-flex-mod1
+{
+ background-color:#444444 ; 
+ display:flex; 
+ justify-content: space-between;  
+ border-bottom:2px solid rgba(0,0,0,0.3) ; 
+ color:white ; 
+ text-shadow:2px 2px 2px rgba(0,0,0,0.4);
+}
+.bkz-flex-space
+{
+ display : flex ; 
+ justify-content: space-around;
+}
+.bkz-flex-space div 
+{
+padding:5px ; 
+}
+.bkz-cursor-pointer:hover 
+{
+cursor:pointer ; 
+}
+@media screen and (max-width: 1024px)
+{
+    .bkz-header-menu,
+    .bkz-header-home
+    {
+    display:block ; 
+    padding:10px;
+    }
+    .bkz-flex-mod1
+    {
+    display:none ; 
+    }
+    .bkz-cursor-pointer:hover  
+    {
+    opacity:0.5;
+    }
+}
+/* Template formulaire */
+/* Exemple du code template */
+/* 
+<div class="form-style1">
+    <div>
+        <h1>Connexion</h1> <h1>Inscription</h1>
+    </div>
+        <input type="text" name="" id="">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+            <div>
+                    <div>
+                    Valider
+                    </div>
+            </div>
+    </div> 
+*/
+/* Template formulaire n°1 */
+.form-style1
+{
+    width : 500px;       
+    margin:auto ; 
+    margin-top:50px;
+}
+.form-style1 input 
+{
+    width:90% ; 
+    border : 1px solid rgba(0,0,0,0) ; 
+    border-bottom : 2px solid rgba(0,0,0,0.3) ;       
+    padding:5px;
+    margin:auto ; 
+    margin-top:10px;
+}
+.form-style1 div div
+{       
+    width:50% ; 
+    margin-top:50px;
+    text-align:center ;
+    border:1px solid rgba(0,0,0,0.3) ;  
+    padding : 15px ;
+}
+.form-style1 div 
+{
+      display:flex; 
+      justify-content : space-around ; 
+}
+@media screen and (max-width: 1024px)
+{
+  .form-style1
+{
+    width :80%;       
+}
+.form-style1 div div
+{         
+    width:50% ; 
+}
+}    
+/* Template formulaire n°1 Fin */
+/* Template des positions*/
+.bkz-flex-around,.bkz-flex-start,.bkz-flex-end,.bkz-flex-between,.bkz-flex-center
+{
+    display : flex; 
+    flex-wrap: wrap;
+}
+.bkz-flex-around
+{
+    justify-content : space-around ;
+}
+.bkz-flex-start
+{
+    justify-content : flex-start  ; 
+}
+.bkz-flex-end
+{
+    justify-content : flex-end ; 
+}
+.bkz-flex-between
+{
+    justify-content : space-between ; 
+}
+.bkz-flex-center
+{
+    justify-content :center ;
+}

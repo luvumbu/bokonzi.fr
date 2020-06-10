@@ -1,0 +1,458 @@
+body
+{
+    margin: 0 ; 
+    padding: 0;
+}
+.bkz-font-size-10px
+{
+    font-size: 10px;
+}
+.bkz-font-size-20px
+{
+    font-size: 20px;
+}
+.bkz-font-size-30px
+{
+    font-size: 30px;
+}
+.bkz-font-size-10px
+{
+    font-size: 10px;
+}
+.bkz-font-size-40px
+{
+    font-size: 40px;
+}
+.bkz-font-size-50px
+{
+    font-size: 50px;
+}
+.bkz-font-size-1em
+{
+    font-size: 1em;
+}
+.bkz-font-size-1-1em
+{
+    font-size: 1.1em;
+}
+.bkz-font-size-1-2em
+{
+    font-size: 1.2em;
+}
+.bkz-font-size-1-3em
+{
+    font-size: 1.3em;
+}
+.bkz-font-size-1-4em
+{
+    font-size: 1.4em;
+}
+.bkz-font-size-1-5em
+{
+    font-size: 1.5em;
+}
+.bkz-font-size-1-6em
+{
+    font-size: 1.6em;
+}
+.bkz-font-size-1-7em
+{
+    font-size: 1.7em;
+}
+.bkz-font-size-1-8em
+{
+    font-size: 1.8em;
+}
+.bkz-font-size-1-9em
+{
+    font-size: 1.9em;
+}
+.bkz-font-size-2em
+{
+    font-size: 2em;
+}
+.bkz-font-size-3em
+{
+    font-size: 3em;
+}
+.bkz-font-size-4em
+{
+    font-size: 4em;
+}
+.bkz-color-blue-1
+{
+    color:#4b4dce;
+}
+.bkz-color-blue-3
+{
+    color:#2e20f0;
+}
+.bkz-color-blue-4
+{
+    color:#1e4e79;
+}
+.bkz-color-red-1
+{
+    color:#fe2030;
+}
+.bkz-color-red-3
+{
+    color:#f02030;
+}
+.bkz-color-red-4
+{
+    color:#d22030;
+}
+.bkz-color-yellow-1
+{
+    color:#fafe20;
+}
+.bkz-color-yellow-3
+{
+    color:#d7e271;
+}
+.bkz-color-yellow-4
+{
+    color:#c7d44a;
+}
+.bkz-color-green-1
+{
+    color:#20fe45;
+}
+.bkz-color-green-3
+{
+    color:#a6e2a9;
+}
+.bkz-color-green-4
+{
+    color:#81bb8e;
+}
+.bkz-color-orange-1
+{
+    color:#dda919;
+}
+.bkz-color-orange-3
+{
+    color:#e2b171;
+}
+.bkz-color-orange-4
+{
+    color:#f59425;
+}
+.bkz-color-pink-1
+{
+    color:#dd19cd;
+}
+.bkz-color-pink-3
+{
+    color:#c50dd6;
+}
+.bkz-color-pink-4
+{
+    color:#f525eb;
+}
+.bkz-text-align-center 
+{
+    text-align: center;
+}
+.bkz-text-align-center-padding-10px 
+{
+    text-align: center;
+    padding: 10px;
+}
+.bkz-text-align-center-padding-20px 
+{
+    text-align: center;
+    padding: 20px;
+}
+.bkz-text-align-center-padding-30px 
+{
+    text-align: center;
+    padding: 30px;
+}
+.bkz-text-align-center-padding-40px 
+{
+    text-align: center;
+    padding: 40px;
+}
+.bkz-text-align-center-padding-50px 
+{
+    text-align: center;
+    padding: 50px;
+}
+.bkz-text-align-center-padding-60px 
+{
+    text-align: center;
+    padding: 60px;
+}
+.bkz-text-align-center-padding-70px 
+{
+    text-align: center;
+    padding: 70px;
+}
+.bkz-text-align-center-padding-80px 
+{
+    text-align: center;
+    padding: 80px;
+}
+.bkz-text-align-center-padding-90px 
+{
+    text-align: center;
+    padding: 90px;
+}
+.bkz-text-align-center-padding-100px 
+{
+    text-align: center;
+    padding: 100px;
+}
+.bkz-text-align-center-margin-10px 
+{
+    text-align: center;
+    margin: 10px;
+}
+.bkz-text-align-center-margin-20px 
+{
+    text-align: center;
+    margin: 20px;
+}
+.bkz-text-align-center-margin-30px 
+{
+    text-align: center;
+    margin: 30px;
+}
+.bkz-text-align-center-margin-40px 
+{
+    text-align: center;
+    margin: 40px;
+}
+.bkz-text-align-center-margin-50px 
+{
+    text-align: center;
+    margin: 50px;
+}
+.bkz-text-align-center-margin-60px 
+{
+    text-align: center;
+    margin: 60px;
+}
+.bkz-text-align-center-margin-70px 
+{
+    text-align: center;
+    margin: 70px;
+}
+.bkz-text-align-center-margin-80px 
+{
+    text-align: center;
+    margin: 80px;
+}
+.bkz-text-align-center-margin-90px 
+{
+    text-align: center;
+    margin: 90px;
+}
+.bkz-text-align-center-margin-100px 
+{
+    text-align: center;
+    margin: 100px;
+}
+.bkz-text-align-center-padding-top-10px 
+{
+    text-align: center;
+    padding-top: 10px;
+}
+.bkz-text-align-center-padding-top-20px 
+{
+    text-align: center;
+    padding-top: 20px;
+}
+.bkz-text-align-center-padding-top-30px 
+{
+    text-align: center;
+    padding-top: 30px;
+}
+.bkz-text-align-center-padding-top-40px 
+{
+    text-align: center;
+    padding-top: 40px;
+}
+.bkz-text-align-center-padding-top-50px 
+{
+    text-align: center;
+    padding-top: 50px;
+}
+.bkz-text-align-center-padding-top-60px 
+{
+    text-align: center;
+    padding-top: 60px;
+}
+.bkz-text-align-center-padding-top-70px 
+{
+    text-align: center;
+    padding-top: 70px;
+}
+.bkz-text-align-center-padding-top-80px 
+{
+    text-align: center;
+    padding-top: 80px;
+}
+.bkz-text-align-center-padding-top-90px 
+{
+    text-align: center;
+    padding-top: 90px;
+}
+.bkz-text-align-center-padding-top-100px 
+{
+    text-align: center;
+    padding-top: 100px;
+}
+.bkz-text-align-center-padding-left-10px 
+{
+    text-align: center;
+    padding-left: 10px;
+}
+.bkz-text-align-center-padding-left-20px 
+{
+    text-align: center;
+    padding-left: 20px;
+}
+.bkz-text-align-center-padding-left-30px 
+{
+    text-align: center;
+    padding-left: 30px;
+}
+.bkz-text-align-center-padding-left-40px 
+{
+    text-align: center;
+    padding-left: 40px;
+}
+.bkz-text-align-center-padding-left-50px 
+{
+    text-align: center;
+    padding-left: 50px;
+}
+.bkz-text-align-center-padding-left-60px 
+{
+    text-align: center;
+    padding-left: 60px;
+}
+.bkz-text-align-center-padding-left-70px 
+{
+    text-align: center;
+    padding-left: 70px;
+}
+.bkz-text-align-center-padding-left-80px 
+{
+    text-align: center;
+    padding-left: 80px;
+}
+.bkz-text-align-center-padding-left-90px 
+{
+    text-align: center;
+    padding-left: 90px;
+}
+.bkz-text-align-center-padding-left-100px 
+{
+    text-align: center;
+    padding: 100px;
+}
+
+.bkz-text-align-center-padding-right-10px 
+{
+    text-align: center;
+    padding-right: 10px;
+}
+.bkz-text-align-center-padding-right-20px 
+{
+    text-align: center;
+    padding-right: 20px;
+}
+.bkz-text-align-center-padding-right-30px 
+{
+    text-align: center;
+    padding-right: 30px;
+}
+.bkz-text-align-center-padding-right-40px 
+{
+    text-align: center;
+    padding-right: 40px;
+}
+.bkz-text-align-center-padding-right-50px 
+{
+    text-align: center;
+    padding-right: 50px;
+}
+.bkz-text-align-center-padding-right-60px 
+{
+    text-align: center;
+    padding-right: 60px;
+}
+.bkz-text-align-center-padding-right-70px 
+{
+    text-align: center;
+    padding-right: 70px;
+}
+.bkz-text-align-center-padding-right-80px 
+{
+    text-align: center;
+    padding-right: 80px;
+}
+.bkz-text-align-center-padding-right-90px 
+{
+    text-align: center;
+    padding-right: 90px;
+}
+.bkz-text-align-center-padding-right-100px 
+{
+    text-align: center;
+    padding: 100px;
+}
+.bkz-text-align-center-padding-bottom-10px 
+{
+    text-align: center;
+    padding-bottom: 10px;
+}
+.bkz-text-align-center-padding-bottom-20px 
+{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.bkz-text-align-center-padding-bottom-30px 
+{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.bkz-text-align-center-padding-bottom-40px 
+{
+    text-align: center;
+    padding-bottom: 40px;
+}
+.bkz-text-align-center-padding-bottom-50px 
+{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.bkz-text-align-center-padding-bottom-60px 
+{
+    text-align: center;
+    padding-bottom: 60px;
+}
+.bkz-text-align-center-padding-bottom-70px 
+{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.bkz-text-align-center-padding-bottom-80px 
+{
+    text-align: center;
+    padding-bottom: 80px;
+}
+.bkz-text-align-center-padding-bottom-90px 
+{
+    text-align: center;
+    padding-bottom: 90px;
+}
+.bkz-text-align-center-padding-bottom-100px 
+{
+    text-align: center;
+    padding: 100px;
+}

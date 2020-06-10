@@ -1,0 +1,175 @@
+/*
+*
+*Ajout de la police Robototo
+*
+*/
+@font-face {
+    font-family: "Roboto-Black";
+    src: url("../font/roboto/Roboto-Black.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-BoldCondensedItalic";
+    src: url("../font/roboto/Roboto-BoldCondensedItalic.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-BlackItalic";
+    src: url("../font/roboto/Roboto-BlackItalic.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-BoldCondensed";
+    src: url("../font/roboto/Roboto-BoldCondensed.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-ThinItalic";
+    src: url("../font/roboto/Roboto-ThinItalic.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-ThinItalic";
+    src: url("../font/roboto/Roboto-ThinItalic.ttf");
+  }
+  
+  @font-face {
+    font-family: "Roboto-Thin";
+    src: url("../font/roboto/Roboto-Thin.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-Regular";
+    src: url("../font/roboto/Roboto-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-MediumItalic";
+    src: url("../font/roboto/Roboto-MediumItalic.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-Medium";
+    src: url("../font/roboto/Roboto-Medium.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-LightItalic";
+    src: url("../font/roboto/Roboto-LightItalic.ttf");
+  }
+
+  @font-face {
+    font-family: "Roboto-Light";
+    src: url("../font/roboto/Roboto-Light.ttf");
+  }
+    @font-face {
+    font-family: "Roboto-Italic";
+    src: url("../font/roboto/Roboto-Italic.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-CondensedItalic";
+    src: url("../font/roboto/Roboto-CondensedItalic.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-Condensed";
+    src: url("../font/roboto/Roboto-Condensed.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-BoldItalic";
+    src: url("../font/roboto/Roboto-BoldItalic.ttf");
+  }
+  @font-face {
+    font-family: "Roboto-BoldCondensedItalic";
+    src: url("../font/roboto/Roboto-BoldCondensedItalic.ttf");
+  }
+  
+  @font-face {
+    font-family: "Roboto-BoldCondensed";
+    src: url("../font/roboto/Roboto-BoldCondensed.ttf");
+  }
+  
+  @font-face {
+    font-family: "Roboto-Bold";
+    src: url("../font/roboto/Roboto-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: "Roboto-BlackItalic";
+    src: url("../font/roboto/Roboto-BlackItalic.ttf");
+  }
+  
+  @font-face {
+    font-family: "Roboto-Black";
+    src: url("../font/roboto/Roboto-Black.ttf");
+  }  
+/*
+*
+*Finde l'ajout  de la police Robototo
+*
+*/
+/* Ajout font BebasNeue-Regular */
+  @font-face {
+      font-family: "BebasNeue-Regular"; 
+    src: url("../font/bebas_neue/BebasNeue-Regular.ttf"); 
+  }
+  @font-face {
+    font-family: "BebasNeue-Regular"; 
+  src: url("../font/bebas_neue/BebasNeue-Regular.otf"); 
+}
+/* Fin Ajout font BebasNeue-Regular */  
+/* Ajout CaviarDreams */
+  @font-face {
+    font-family: "CaviarDreams";
+    src: url("../font/CaviarDreams/CaviarDreams.ttf");
+  }
+  @font-face {
+    font-family: "CaviarDreams_Bold";
+    src: url("../font/CaviarDreams/CaviarDreams_Bold.ttf");
+  }
+  @font-face {
+    font-family: "CaviarDreams_BoldItalic";
+    src: url("../font/CaviarDreams/CaviarDreams_BoldItalic.ttf");
+  }
+  @font-face {
+    font-family: "CaviarDreams_Bold";
+    src: url("../font/CaviarDreams/CaviarDreams_Bold.ttf");
+  }
+  @font-face {
+    font-family: "CaviarDreams_BoldItalic";
+    src: url("../font/CaviarDreams/CaviarDreams_BoldItalic.ttf");
+  }
+/* Fin de l'aout font CaviarDreams */  
+  @font-face {
+      font-family: "CaviarDreams_Italic"; 
+    src: url("../font/comfortaa/CaviarDreams_Italic.ttf"); 
+  }  
+  @font-face {
+    font-family: "Comfortaa-Bold";
+    src: url("../font/comfortaa/Comfortaa-Bold.ttf");
+  }
+
+  @font-face {
+    font-family: "Comfortaa-Bold";
+    src: url("../font/comfortaa/Comfortaa-Bold.ttf");
+  }
+  @font-face {
+    font-family: "Comfortaa-Light";
+    src: url("../font/comfortaa/Comfortaa-Light.ttf");
+  }
+  @font-face {
+    font-family: "Comfortaa-Regular";
+    src: url("../font/comfortaa/Comfortaa-Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "a_alloy_ink";
+    src: url("../font/aAlloyInk/aAlloyInk.ttf");
+  }
+
+  @font-face {
+    font-family: "SundayMorning";
+    src: url("../font/Sunday Morning/SundayMorning.ttf");
+  }
+  @font-face {
+    font-family: "Pokemon Solid";
+    src: url("../font/pokemon/Pokemon Solid.ttf");
+  }
+  @font-face {
+    font-family: "Pokemon Hollow";
+    src: url("../font/pokemon/Pokemon Hollow.ttf");
+  }
+
+
+
+  

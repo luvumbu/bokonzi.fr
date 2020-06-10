@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Menu</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="button()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#1" onclick="button_creation(this)" id="add_form">Création d'un tableau <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#2" onclick="button_creation(this)" id="all_form">Mes tableau <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#" onclick="button_creation(this)" id="session_destroy">Déconnexion <span class="sr-only">(current)</span></a>
+      </li>
+      </ul> 
+  </div>
+</nav>
+<div id="demo"></div>
+<script>
+
+  var status = 0; 
+  function Ajax(id_,url_) {  
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById(id_).innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", url_, true);
+  xhttp.send();
+} 
+ 
+ function button_creation(this_)
+ {
+   var button_creation_name_id = this_.id ;
+   switch (button_creation_name_id) {
+  case "session_destroy":
+          Ajax("demo","class/model/session_destroy.php"); 
+          setTimeout(function(){ 
+            document.location.reload(true);          
+          }, 500);
+    break;
+  case "add_form":
+  status = 1;
+  var all_form_ = document.getElementById("all_form");
+  
+  if(all_form_.className=="nav-link add_form_")
+  {
+    all_form_.className="nav-link";
+  } 
+  // Ajax("demo","Class/Php/CreatTable.php"); 
+  // Création d'un objet FormData
+          var add_form_ = document.getElementById("add_form");
+          if(add_form_.className=="nav-link")
+          {
+            var identite = new FormData();
+          // Ajout d'information dans l'objet
+          identite.append("login", "root");
+          identite.append("password", "root");
+          // Création et configuration d'une requête HTTP POST vers le fichier post_form.php
+          var req = new XMLHttpRequest();
+          req.open("POST", "class/mvc/model/add/CreatTable.php");
+          // Envoi de la requête en y incluant l'objet
+          req.send(identite);
+          console.log(req);
+          add_form_.className="nav-link add_form_"; 
+          }
+          setTimeout(function(){            
+                         Ajax2("myForms","class/mvc/vue/section/all_form/myForms.php")                           
+                           }, 100);
+    break;
+  case "all_form":
+  status = 2;
+
+  var add_form_ = document.getElementById("add_form");
+  var all_form_ = document.getElementById("all_form");  
+  setTimeout(function(){         
+           all_form_.className="nav-link add_form_";
+           add_form_.className="nav-link";
+                         Ajax2("myForms","class/mvc/vue/section/all_form/myForms_all.php")                           
+                           }, 100); 
+    break;  
+}
+ }
+</script>
+<style>
+  .add_form_
+  {
+      opacity: 0.4;
+  }
+</style>
