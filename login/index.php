@@ -13,11 +13,9 @@
 <body>
     <?php  
           if(isset($_SESSION["ON"]))
-          {             
-            echo "Bonjour1" ; 
-            include("index_img.php");
-            echo "Bonjour2";
-           // include("class/app.php");                                
+          {            
+
+        include("class/app.php");                                
           }     
           else 
           {
