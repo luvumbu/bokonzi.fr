@@ -1,33 +1,26 @@
 <?php 
-echo "0";
     include("class/mvc/model/configuration/add_session_and_ip.php");
-    echo "01";
     include("class/mvc/model/configuration/add_folder_login.php");
-    echo "02" ; 
     // Création de l'adresse ip avec les variables de session
     // Si le dossier n'existe pas créer un dossier 
   ?>
 <header>
     <?php        
       // aJoute une variable avec les session recuperer 
-      echo "1";
        include("class/mvc/vue/header/header.php");      
     ?>
 </header>
 <section>
     <?php       
-    echo "2";
       include("class/mvc/vue/section/section.php");            
     ?>
 </section>
 <footer>
-    <?php  
-    echo "3";     
+    <?php       
      include("class/mvc/vue/footer/footer.php");      
     ?>
 </footer>
 <?php
-echo "4";
   include("class/style/links.php"); 
 ?>
 <script src="class/mvc/controller/js.js"></script>   
