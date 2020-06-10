@@ -1,6 +1,5 @@
 <?php
 //Récuperation des variables 
-echo $id ; 
 $filename = 'uploads/'.$id.'/index.php';
 if (file_exists($filename)) {
     
