@@ -14,8 +14,10 @@
     <?php  
           if(isset($_SESSION["ON"]))
           {             
+            echo "Bonjour1" ; 
             include("index_img.php");
-            include("class/app.php");                                
+            echo "Bonjour2";
+           // include("class/app.php");                                
           }     
           else 
           {
