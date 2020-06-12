@@ -46,6 +46,7 @@ if ($result->num_rows > 0) {
     $myform_description_ = $row["myform_description"];
     $myform_source=   $row["myform_source"];
     $myform_id = $row["myform_id"];
+    $myform_source=   $row["myform_source"];
     ?>
     <input value="<?php echo $myform_title_.''?>" title="<?php echo $myform_id ?>"                onkeyup="update_myForms(this)"  class="form-control form-control-lg titre" type="text" placeholder="Titre sans nom"     id="<?php echo $titre.$myform_id ?>">
     <input value="<?php echo $myform_description_.''?>"  title="<?php echo $myform_id ?>"         onkeyup="update_myForms(this)"  class="form-control form-control-lg description" type="text" placeholder="Déscription"  id="<?php echo $description.$myform_id ?>">
@@ -55,18 +56,32 @@ if ($result->num_rows > 0) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 <?php 
+
+if($myform_source!="") 
+{
+  ?>
+
+   
+
+  <div id="options" style="margin-bottom:30px"></div> 
+          <div style="position:relative">
+          <div class="cross"> X</div>
+          <img src="<?php echo $myform_source.'.jpg' ?>" class="img-fluid" alt="Responsive image">
+      </div>
+    <div class="margin-bottom-100px"></div> 
+     <?php
+}
+
+
+
+
+
+
+
+
+
+
     // Create connection
 $connx1 = new mysqli($servername, $username, $password, $dbname);
 // Check connection

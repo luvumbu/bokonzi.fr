@@ -48,8 +48,7 @@ if ($result->num_rows > 0) {
  
  if($myform_source!="")
  { 
-   
-   ?>
+      ?>
 
    
 

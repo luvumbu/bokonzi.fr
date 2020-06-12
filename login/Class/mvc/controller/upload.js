@@ -45,7 +45,10 @@ $(function() {
 
                         upload_file(next_slice); // s'il reste à lire, on appelle récursivement la fonction
                     } else {
-                        $('#upload-progress').html('Upload Complete!');             
+                        $('#upload-progress').html('Upload Complete!'); 
+                        setTimeout(function(){
+                            $('#upload-progress').html(''); 
+                             }, 10000);            
                        
 
 
