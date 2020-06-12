@@ -13,7 +13,7 @@
         <a class="nav-link" href="#2" onclick="button_creation(this)" id="all_form">Mes tableau <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link" href="#" onclick="button_creation(this)" id="session_destroy">Déconnexion <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#" onclick="destroy()" id="session_destroy">Déconnexion <span class="sr-only">(current)</span></a>
       </li>
       </ul> 
   </div>
@@ -83,8 +83,24 @@
            add_form_.className="nav-link";
                          Ajax2("myForms","class/mvc/vue/section/all_form/myForms_all.php")                           
                            }, 100); 
-    break;  
+    break;
+    
 }
+ }
+ function destroy() 
+ {
+
+      var identite = new FormData();
+      var req = new XMLHttpRequest();
+      req.open("POST", "class/mvc/model/configuration/session_destroy.php");
+      // Envoi de la requête en y incluant l'objet
+      req.send(identite);
+      console.log(req);
+
+
+      setTimeout(function(){ 
+        document.location.reload(true);
+      }, 100);
  }
 </script>
 <style>

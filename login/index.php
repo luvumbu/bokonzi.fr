@@ -13,8 +13,7 @@
 <body>
     <?php  
           if(isset($_SESSION["ON"]))
-          {             
-            include("index_img.php");
+          {            
             include("class/app.php");                                
           }     
           else 

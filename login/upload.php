@@ -1,7 +1,10 @@
 <?php
+// ajoute des image reçu 
 session_start() ; 
    // $_SESSION["aleatoire"]
    // $_SESSION["login_id"] ;
+   
+$submit=  $_SESSION["submit"] ;    
 $login = $_SESSION["login_id"] ; 
 $aleatoire =$_SESSION["aleatoire"] ;
 function decode_chunk($data) {
@@ -20,7 +23,8 @@ function decode_chunk($data) {
 }
 
 // $file_path: fichier cible: garde le même nom de fichier, dans le dossier uploads
-$file_path = 'uploads/' .$login.'/'.$aleatoire.'.jpg';
+$file_path = 'uploads/' .$login.'/'.$submit.'/'.$aleatoire.'.jpg';
+
 $file_data = decode_chunk($_POST['file_data']);
 
 if (false === $file_data) {

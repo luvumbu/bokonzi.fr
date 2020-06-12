@@ -1,6 +1,7 @@
 <?php 
     include("class/mvc/model/configuration/add_session_and_ip.php");
     include("class/mvc/model/configuration/add_folder_login.php");
+    include("class/mvc/vue/section/all_form/index_img.php");
     // Création de l'adresse ip avec les variables de session
     // Si le dossier n'existe pas créer un dossier 
   ?>
@@ -49,6 +50,4 @@
  transform: translateX(0px); /* On déplace l'objet */
  transition:0 ; 
 }
-
-
 </style>

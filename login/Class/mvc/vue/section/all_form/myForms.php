@@ -21,6 +21,8 @@ $btn_secondary = "btn_secondary_" ;
 ?>
 <div style="">
 <div class="style1">
+
+
 <?php 
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -46,7 +48,11 @@ if ($result->num_rows > 0) {
  
  if($myform_source!="")
  {
+   
+   
    ?>
+
+   
 
 <div id="options" style="margin-bottom:30px"></div> 
         <div style="position:relative">
@@ -123,7 +129,7 @@ if ($resultono->num_rows > 0) {
               </div>
           <div>
                 <i class="fa fa-remove fa-remove1 remove_type_data" onclick="remove_form(this)" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"></i>
-                 <button type="button"     title="<?php echo $myform_id ?>"     value="add_picture_data"  onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img_all"><i class="fa fa-file-image-o"></i></button> 
+                 <button type="button"     title="<?php echo $titres_data_id_ ?>"     value="add_picture_data"  onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img_all"><i class="fa fa-file-image-o"></i></button> 
           </div> 
       <?php 
     }
@@ -140,7 +146,8 @@ if ($resultono->num_rows > 0) {
               </div>
           <div>
                 <i class="fa fa-remove fa-remove1 remove_type_data" onclick="remove_form(this)"  value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"></i>
-                <i class="fa fa-file-image-o images_1"  style="cursor:pointer"></i>
+                <button type="button"     title="<?php echo $titres_data_id_ ?>"     value="add_picture_data"  onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img_all"><i class="fa fa-file-image-o"></i></button> 
+
           </div> 
       <?php 
     }

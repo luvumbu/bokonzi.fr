@@ -11,15 +11,7 @@ function decode_chunk($data) {
     }
     return $data;
 }
-// $_SESSION["toggle_img_name"]
-// $_SESSION["login_id"]
-// $file_path: fichier cible: garde le même nom de fichier, dans le dossier uploads
-// $structure = './depth1/depth2/depth3/';
-// // Pour créer une stucture imbriquée, le paramètre $recursive 
-// // doit être spécifié.
-// if (!mkdir($structure, 0777, true)) {
-//     die('Echec lors de la création des répertoires...');
-// }
+
 $file_path = 'uploads/'.$_SESSION["login_id"].'/'.$_SESSION["toggle_img_name"].'.jpg';
 $file_data = decode_chunk($_POST['file_data']);
 if (false === $file_data) {
