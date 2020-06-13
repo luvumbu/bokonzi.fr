@@ -48,7 +48,7 @@ $(function() {
                         $('#upload-progress').html('Upload Complete!'); 
                         setTimeout(function(){
                             $('#upload-progress').html(''); 
-                             }, 10000);            
+                             }, 10000);      
                        
 
 

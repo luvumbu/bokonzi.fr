@@ -1,6 +1,5 @@
 <?php
-    session_start() ;
-
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -11,16 +10,14 @@
     <title>Bokonzi</title>
 </head>
 <body>
-    <?php  
-          if(isset($_SESSION["ON"]))
-          {            
-            include("class/app.php");                                
-          }     
-          else 
-          {
-            header('Location: ../index.php');
-            // Rédirection vers la page principal si l'utilisateur n'est pas connecté
-          }
+  <?php  
+    if(isset($_SESSION["ON"])) {            
+      include("class/app.php");                                
+    }     
+    else {
+      header('Location: ../index.php');
+      // Rédirection vers la page principal si l'utilisateur n'est pas connecté
+    }
    ?> 
 </body>
 </html>

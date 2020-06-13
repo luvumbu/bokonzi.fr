@@ -1,43 +1,40 @@
 <?php
-session_start() ; 
+session_start(); 
 header("Access-Control-Allow-Origin: *");
+
 $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "bkz_all";
-$nom_requette =$_POST["nom_requette"] ;
-$my_mail = $_POST["mail"] ; 
-$my_password= $_POST["password"] ; 
-$_SESSION["servername"]=$servername ;
-$_SESSION["username"]=$username ;
+
+$nom_requette =$_POST["nom_requette"];
+$my_mail = $_POST["mail"]; 
+$my_password= $_POST["password"]; 
+$_SESSION["servername"]=$servername;
+$_SESSION["username"]=$username;
 $_SESSION["password"] = $password;
-$_SESSION["dbname"] = $dbname ;
-$tentatives= 4;
-$banni_verif=0; 
+$_SESSION["dbname"] = $dbname;
 $ip = $_SERVER['REMOTE_ADDR']; // Recuperation de l'IP du visiteur
-// echo $ip ; 
-if($ip=="::1")
-{
-// echo "Hors ligne" ; 
+// echo $ip; 
+if($ip=="::1") {
+// echo "Hors ligne"; 
 }
-else 
-{
+else {
     $username = "u510206436_bkz_all";
     $password = "v3p9r3e@59A";
     $dbname = "u510206436_bkz_all";
     $ip = $_SERVER['REMOTE_ADDR']; // Recuperation de l'IP du visiteur
-    $_SESSION["servername"]=$servername ;
-    $_SESSION["username"]=$username ;
+    $_SESSION["servername"]=$servername;
+    $_SESSION["username"]=$username;
     $_SESSION["password"] = $password;
-    $_SESSION["dbname"] = $dbname ;
+    $_SESSION["dbname"] = $dbname;
     $query = @unserialize(file_get_contents('http://ip-api.com/php/'.$ip)); //connection au serveur de ip-api.com et recuperation des données
-    if($query && $query['status'] == 'success') 
-    {
+    if($query && $query['status'] == 'success') {
         //code avec les variables
         // echo "Bonjour visiteur de " . $query['country'] . "," . $query['city'];
     }
-    $pays = $query['country'] ; 
-    $ville = $query['city'] ; 
+    $pays = $query['country']; 
+    $ville = $query['city']; 
     $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
@@ -68,8 +65,8 @@ if ($result_banni->num_rows > 0) {
     {
          if($nom_requette=="connexion")
          {
-          $banni_verif ++ ; 
-          $tentatives  -- ; 
+          $banni_verif ++; 
+          $tentatives  --; 
           // Si la connexion ecou on ajout ++ a la valeur pour compter le nombre dessaye restant 
          }
     }  
@@ -86,7 +83,7 @@ $conn->close();
 }
 switch ($nom_requette ) {
   case "connexion":
-    echo "Connexion ok ".$my_mail." et ".$my_password ; 
+    echo "Connexion ok ".$my_mail." et ".$my_password; 
        // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
     // Check connection
@@ -99,23 +96,23 @@ switch ($nom_requette ) {
     if ($result->num_rows > 0) {
       // output data of each row
       while($row = $result->fetch_assoc()) {
-             $_SESSION["newsession"] = "ON" ; 
+             $_SESSION["newsession"] = "ON"; 
              $_SESSION["info"] ="Connexion reussi";
              $_SESSION["my_mail"] =$my_mail;
              $_SESSION["my_password"] =$my_password;
-             $_SESSION["id"] =$row["login_id"] ; 
-             $_SESSION["login_id"] =$row["login_id"] ;
-             $_SESSION["ip"] =  $_SERVER['REMOTE_ADDR'] ; 
+             $_SESSION["id"] =$row["login_id"]; 
+             $_SESSION["login_id"] =$row["login_id"];
+             $_SESSION["ip"] =  $_SERVER['REMOTE_ADDR']; 
       }
     } else { 
 
-      if($nom_requette=="connexion")
-      {
-        $_SESSION["newsession"] = "OFF" ; 
+      if($nom_requette=="connexion") {
+
+        $_SESSION["newsession"] = "OFF"; 
       }
-      else 
-      {
-        $_SESSION["newsession"] = "OFF2" ; 
+      else {
+
+        $_SESSION["newsession"] = "OFF2"; 
       }
             
              $_SESSION["info"] =$tentatives;
@@ -138,18 +135,16 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
 
-    if($nom_requette=="connexion")
-    {
-      $_SESSION["newsession"] = "OFF" ; 
+    if($nom_requette=="connexion") {
+      $_SESSION["newsession"] = "OFF"; 
     }
-    else 
-    {
-      $_SESSION["newsession"] = "OFF2" ; 
+    else {
+      $_SESSION["newsession"] = "OFF2"; 
     }
     $_SESSION["info"] =$tentatives;
   }
 } else {
-    $_SESSION["newsession"] = "ON" ; 
+    $_SESSION["newsession"] = "ON"; 
   
     $_SESSION["info"] ="Inscription reussi";
     $_SESSION["my_mail"] =$my_mail;
@@ -175,12 +170,9 @@ $conn->close();
   default:
    // aucune valeur par defaut 
 }
-if($banni_verif >3) // Nombre d'essaye avnt d'etre banni
-{
-  $_SESSION["info"] ="BANNI"; 
-
-
-// Create connection
+if($banni_verif >3) {
+  $_SESSION["info"] ="BANNI";
+  // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {

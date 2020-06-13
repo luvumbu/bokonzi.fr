@@ -14,51 +14,6 @@ $password = $_SESSION["password"] ;
 $dbname =$_SESSION["dbname"] ;
 $username=$_SESSION["username"] ; 
 $id=$_SESSION["id"] ;
-echo $servername ; 
-echo $password ;
-echo $dbname ;
-echo $username ; 
-
-// $conn = new mysqli($servername, $username, $password, $dbname);
-// // Check connection
-// if ($conn->connect_error) {
-//   die("Connection failed: " . $conn->connect_error);
-// }
-
-
-
-
-
-
-
-
-
-
-// if ($conn->query($sql) === TRUE) {
-//   echo "Record updated successfully";
-// } else {
-//   echo "Error updating record: " . $conn->error;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Create connection
-
-
 
 switch ($submit) {
 

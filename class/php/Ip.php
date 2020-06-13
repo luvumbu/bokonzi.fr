@@ -1,5 +1,5 @@
 <?php
-class Ip{
+class Ip {
     private $_ip;
     private $_city;
     private $_country;
@@ -12,7 +12,7 @@ class Ip{
         $this->_city = $query['country'] ; // récuperation nom de la ville
         $this->_country = $query['city'] ; // récuperation nom du pays
     }
-   else{
+   else {
           $this->_city = "localhost_city";// Si l'utilisateur est en local donner cette valeur "localhost_city"
           $this->_country = "localhost_country";// Si l'utilisateur est en local donner cette valeur "localhost_country"
       }   

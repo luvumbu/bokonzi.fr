@@ -20,15 +20,9 @@ $fa_fa_close="fa_fa_close_" ;
 $btn_secondary = "btn_secondary_" ; 
 ?>
 
-
-
 <div style="">
 <div class="style1">
 <?php
-
-
-
-
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -52,18 +46,11 @@ if ($result->num_rows > 0) {
     <input value="<?php echo $myform_description_.''?>"  title="<?php echo $myform_id ?>"         onkeyup="update_myForms(this)"  class="form-control form-control-lg description" type="text" placeholder="Déscription"  id="<?php echo $description.$myform_id ?>">
     <!-- Attention au Id inscription et connexion car il sont utilisé pour la création d'un nouveau tityre -->
     <div class="margin-bottom-100px"></div>
-
-
-
-
 <?php 
 
 if($myform_source!="") 
 {
   ?>
-
-   
-
   <div id="options" style="margin-bottom:30px"></div> 
           <div style="position:relative">
           <div class="cross"> X</div>
@@ -72,16 +59,6 @@ if($myform_source!="")
     <div class="margin-bottom-100px"></div> 
      <?php
 }
-
-
-
-
-
-
-
-
-
-
     // Create connection
 $connx1 = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -96,22 +73,10 @@ if ($resultx1->num_rows > 0) {
   // output data of each row
   while($rowx1 = $resultx1->fetch_assoc()) {
 
-    
-
-
     $titre_questions_titre = $rowx1["titre_questions_titre"];
     $titre_questions_id_  = $rowx1["titre_questions_id"];
     $titre_questions_type = $rowx1["titre_questions_type"] ;
     $titre_questions_id_myform = $rowx1["titre_questions_id_myform"];
-
- 
-
-
-
- 
-
-
-
     ?>
     <form >
                     <div class="form-group" style="display: flex;justify-content: space-between;">             
@@ -132,82 +97,6 @@ if ($resultx1->num_rows > 0) {
         </form>
         <?php 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Create connection
 $connx2 = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -221,7 +110,6 @@ $resultx2 = $connx2->query($sqlx2);
 if ($resultx2->num_rows > 0) {
   // output data of each row
   while($rowx2 = $resultx2->fetch_assoc()) {
-
 
     $titres_data_id_ = $rowx2["titres_data_id"];    
     $titres_data_titre= $rowx2["titres_data_titre"];
@@ -260,134 +148,24 @@ if ($resultx2->num_rows > 0) {
                       <i class="fa fa-file-image-o images_1"  style="cursor:pointer"></i>
                 </div> 
             <?php 
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
+    }    
   }
 } else {
   echo "";
 }
 $connx2->close();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
   }
 } else {
   echo "";
 }
 $connx1->close();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>
-
-
-
 <div class="btn-group" role="group" aria-label="Basic example">  
                 <div title="<?php echo $myform_id ?>"  id="id_number"  ></div>
                 <button type="button"     title="<?php echo $myform_id ?>"      onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img"><i class="fa fa-file-image-o"></i></button>  
                 <button type="button"     title="<?php echo $add_form?>"        onclick="add_myForms(this)"     id="<?php echo $add_form.$myform_id?>"      class="btn btn-secondary add_form" onclick="addData() " style="background-color:#44ba79;margin-left:200px;padding:15px">    <i class="fa fa-plus-square"></i></button>    
                 <button type="button"     title="<?php echo $myform_id?>"       onclick="remove_form(this)"      id="<?php echo $myform_id?>"                class="btn btn-secondary remove_form" onclick="addData() " style="background-color:#ba4444;margin-left:200px;padding:15px">    <i class="fa fa-close"></i></button>               
           </div>
-
   <?php   
   }
 } else {
@@ -396,69 +174,50 @@ $connx1->close();
  $conn->close();
 ?>
 
-
-
 <style>
- .style1 
-    {
-        width : 50%;
-        margin:auto ; 
-    }
-    .fa-remove1 
-    {
-        
-        padding: 10px; 
-        margin-bottom: 25px;
-        padding: 15px; 
-        background-color:#ba4444; 
-    }
-    .fa-remove1:hover 
-    {
-      cursor:pointer ; 
-    } 
-    .titre_questions 
-    {
-        width : 45%; 
-
-    }
-    .images_1 
-    {
-      margin-left : 25px ; 
-      padding:15px ; 
-      border : 1px solid rgba(0,0,0,0.2) ; 
-    }
-    .margin-bottom-100px 
-    {
-        margin-bottom:100px;
-    }
-    .titre 
-    {
-         
-        margin-top : 100px;
-        margin-bottom : 25px; 
-    }
-    .top 
-    {
-        margin-top:25px ; 
-    }
-    #options
-    {
-        margin-top:25px; 
-        margin-bottom : 25px; 
-    }
-    .margin-bottom
-    {
-        margin-bottom : 130px; 
-    }
-
-
-
-    @media screen and (max-width: 1024px)
+.style1 {
+  width : 50%;
+  margin:auto ; 
+}
+.fa-remove1 {
+  padding: 10px; 
+  margin-bottom: 25px;
+  padding: 15px; 
+  background-color:#ba4444; 
+}
+.fa-remove1:hover {
+  cursor:pointer ; 
+} 
+.titre_questions {
+  width : 45%; 
+}
+.images_1 {
+  margin-left : 25px ; 
+  padding:15px ; 
+  border : 1px solid rgba(0,0,0,0.2) ; 
+}
+.margin-bottom-100px {
+  margin-bottom:100px;
+}
+.titre {
+  margin-top : 100px;
+  margin-bottom : 25px; 
+}
+.top {
+  margin-top:25px ; 
+}
+#options {
+  margin-top:25px; 
+  margin-bottom : 25px; 
+}
+.margin-bottom {
+  margin-bottom : 130px; 
+}
+@media screen and (max-width: 1024px)
 {
-    .style1 
-    {
-        width : 80%;
-        margin:auto ; 
-    }
+  .style1 {
+    width : 80%;
+    margin:auto ; 
+  }
 }  
 </style> 
