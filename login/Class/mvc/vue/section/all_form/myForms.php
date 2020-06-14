@@ -136,7 +136,11 @@ if ($resultono->num_rows > 0) {
 
       <?php 
       if($titres_data_source!="") {
+
+       
         ?>
+
+        
         <img src="<?php echo $titres_data_source.'.jpg' ?>" style="width:15%;margin-bottom:50px" alt="Responsive image">
         <div>
         <i class="fa fa-remove cross2 titres_data_source" onclick="remove_img(this)" title="<?php echo   $titres_data_id_ ?>"></i>
