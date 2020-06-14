@@ -116,11 +116,16 @@ if ($resultx2->num_rows > 0) {
 
     $titres_data_id_ = $rowx2["titres_data_id"];    
     $titres_data_titre= $rowx2["titres_data_titre"];
-    if($titre_questions_type=="square")
-    {
-?>
+    $titres_data_source= $rowx2["titres_data_source"];
 
-<div class="input-group mb-3"  style="display: flex;justify-content: space-between;">
+
+
+
+    switch ($titre_questions_type) {
+      case "square":
+        
+        ?>
+            <div class="input-group mb-3"  style="display: flex;justify-content: space-between;">
                 <div class="input-group-prepend">
                   <div class="input-group-text">                   
                     <input type="checkbox"     aria-label="dario for following text input titre_questions">
@@ -128,32 +133,79 @@ if ($resultx2->num_rows > 0) {
                 </div>
                 <input type="text" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"  onkeyup="update_source(this)" class="form-control titres_data" aria-label="Text input with radio" placeholder="Votre titre">               
               </div>
-          <div>
-                <button type="button"     title="<?php echo $titres_data_id_ ?>"     value="add_picture_data"  onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img_all"><i class="fa fa-file-image-o"></i></button> 
-                <i class="fa fa-remove fa-remove1 remove_type_data" onclick="remove_form(this)" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"></i>
-         
-              </div>
-<?php 
-
-    }
-    else 
-    {
-      ?>
-      <div class="input-group mb-3"  style="display: flex;justify-content: space-between;">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">                   
-                          <input type="radio"     aria-label="dario for following text input titre_questions">
-                        </div>
+              
+        <?php 
+                    if($titres_data_source!="")
+                    {
+                      ?>
+                      <img src="<?php echo $titres_data_source.'.jpg' ?>" style="width:15%;margin-bottom:50px" alt="Responsive image">
+                      <div style="position: relative;">
+                      <i class="fa fa-remove cross2 titres_data_source" onclick="remove_img(this)" title="<?php echo   $titres_data_id_ ?>"></i>
                       </div>
-                      <input type="text" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"  onkeyup="update_source(this)" class="form-control titres_data" aria-label="Text input with radio" placeholder="Votre titre">               
-                    </div>
-                <div>
+                      
+                     <?php 
+                    }
+                    ?>     
+                    <div>
                     <button type="button"     title="<?php echo $titres_data_id_ ?>"     value="add_picture_data"  onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img_all"><i class="fa fa-file-image-o"></i></button> 
                     <i class="fa fa-remove fa-remove1 remove_type_data" onclick="remove_form(this)"  value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"></i>
+                    
+                  </div> 
+              <?php 
+
+        break;
+      case "circle":
+        ?>
+            <div class="input-group mb-3"  style="display: flex;justify-content: space-between;">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">                   
+                    <input type="radio"     aria-label="dario for following text input titre_questions">
+                  </div>
+                </div>
+                <input type="text" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"  onkeyup="update_source(this)" class="form-control titres_data" aria-label="Text input with radio" placeholder="Votre titre">               
+              </div>
+              
+        <?php 
+                    if($titres_data_source!="")
+                    {
+                      ?>
+                      <img src="<?php echo $titres_data_source.'.jpg' ?>" style="width:15%;margin-bottom:50px" alt="Responsive image">
+                      <div style="position: relative;">
+                      <i class="fa fa-remove cross2 titres_data_source" onclick="remove_img(this)" title="<?php echo   $titres_data_id_ ?>"></i>
+                      </div>
                       
-                </div> 
-            <?php 
-    }    
+                     <?php 
+                    }
+                    ?>     
+                    <div>
+                    <button type="button"     title="<?php echo $titres_data_id_ ?>"     value="add_picture_data"  onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img_all"><i class="fa fa-file-image-o"></i></button> 
+                    <i class="fa fa-remove fa-remove1 remove_type_data" onclick="remove_form(this)"  value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"></i>
+                    
+                  </div> 
+              <?php 
+        break;
+      case "green":
+        echo "Your favorite color is green!";
+        break;
+      default:
+        echo "Your favorite color is neither red, blue, nor green!";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
   }
 } else {
   echo "";

@@ -165,16 +165,19 @@ case "btn btn-secondary square_":
 case "btn btn-secondary circle_":
   identite.append("titre_questions_source", "circle");
   break;
-  case "btn btn-secondary circle_":
-  identite.append("titre_questions_source", "circle");
+
+  case "btn btn-secondary text_":
+ 
+  identite.append("titre_questions_source", "text");
   break;
-  case "btn btn-secondary circle_":
-  identite.append("titre_questions_source", "circle");
+  case "btn btn-secondary select_":
+  identite.append("titre_questions_source", "select");
   break;
+
   case "form-control titres_data":
   identite.append("titre_questions_source", "circle");
   identite.append("titres_data_titre", this_.value);
-  req.open("POST", "class/mvc/model/update/update_titres_data_titre.php");
+  req.open("POST", "class/mvc/model/update/titre_questions_source.php");
   req.send(identite);
   break;    
 }
