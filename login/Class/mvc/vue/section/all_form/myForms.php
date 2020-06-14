@@ -178,9 +178,10 @@ if ($resultono->num_rows > 0) {
             }
        ?>     
             <div>
-            <i class="fa fa-remove fa-remove1 remove_type_data" onclick="remove_form(this)"  value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"></i>
             <button type="button"     title="<?php echo $titres_data_id_ ?>"     value="add_picture_data"  onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img_all"><i class="fa fa-file-image-o"></i></button> 
-      </div> 
+            <i class="fa fa-remove fa-remove1 remove_type_data" onclick="remove_form(this)"  value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"></i>
+            
+          </div> 
       <?php 
     }
   }
@@ -200,13 +201,21 @@ $conn->close();
     
           <div class="btn-group" role="group" aria-label="Basic example">  
                 <div title="<?php echo $myform_id ?>"  id="id_number"  ></div>
+                <button type="button"     title="<?php echo $add_form?>"        onclick="add_myForms(this)"     id="<?php echo $add_form.$myform_id?>"      class="btn btn-secondary add_form" onclick="addData() ">    <i class="fa fa-plus-square"></i></button>    
                 <button type="button"     title="<?php echo $myform_id ?>"     value="add_picture_form"  onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img_all"><i class="fa fa-file-image-o"></i></button>  
-                <button type="button"     title="<?php echo $add_form?>"        onclick="add_myForms(this)"     id="<?php echo $add_form.$myform_id?>"      class="btn btn-secondary add_form" onclick="addData() " style="background-color:#44ba79;margin-left:200px;padding:15px">    <i class="fa fa-plus-square"></i></button>    
-                <button type="button"     title="<?php echo $myform_id?>"       onclick="remove_form(this)"      id="<?php echo $myform_id?>"                class="btn btn-secondary remove_form" onclick="addData() " style="background-color:#ba4444;margin-left:200px;padding:15px">    <i class="fa fa-close"></i></button>               
+                <button type="button"     title="<?php echo $myform_id?>"       onclick="remove_form(this)"      id="<?php echo $myform_id?>"                class="btn btn-secondary remove_form" onclick="addData()">    <i class="fa fa-close"></i></button>               
      
               </div>          
     </div> 
 <style>
+  .add_form {
+    background-color:#44ba79;margin-left:200px;padding:15px
+  }
+  .remove_form {
+    background-color:#ba4444;
+    margin-left:200px;
+    padding:15px;
+  }
 .style1 {
   width : 50%;
   margin:auto ; 
