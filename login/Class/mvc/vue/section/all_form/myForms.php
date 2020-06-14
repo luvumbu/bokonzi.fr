@@ -149,9 +149,10 @@ if ($resultono->num_rows > 0) {
       }
 ?>
           <div>
-                <i class="fa fa-remove fa-remove1 remove_type_data" onclick="remove_form(this)" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"></i>
                  <button type="button"     title="<?php echo $titres_data_id_ ?>"     value="add_picture_data"  onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img_all"><i class="fa fa-file-image-o"></i></button> 
-          </div>  
+                 <i class="fa fa-remove fa-remove1 remove_type_data" onclick="remove_form(this)" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"></i>
+          
+                </div>  
 <?php 
     }
     else {

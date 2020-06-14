@@ -1,0 +1,45 @@
+<div id="allsection"></div>
+<div id="allsection2"></div> 
+<style>
+    .text-center 
+    {
+        text-align: center;
+        width: 40%;
+        margin:auto ; 
+    }
+</style>
+<script>
+    function connexion_submit(this_)
+    {        
+            let email = document.getElementById("mail1").value ; 
+            let password = document.getElementById("password1").value ; 
+            var identite = new FormData();
+            // Ajout d'information dans l'objet
+            identite.append("email", email);
+            identite.append("password", password);
+            // Création et configuration d'une requête HTTP POST vers le fichier post_form.php
+            var req = new XMLHttpRequest()
+       if(this_.title=="connexion")
+       {      
+           /*
+                #verification de l'identifiant dans la basse de donné 
+           */
+           // Création d'un objet FormData 
+            req.open("POST", "class/model/connexion.php");
+            // Envoi de la requête en y incluant l'objet
+            req.send(identite);
+            console.log(req);
+            setTimeout(function(){   document.location.reload(true); }, 300);
+       }
+       else 
+       {           
+            req.open("POST", "class/model/inscription.php");
+            // Envoi de la requête en y incluant l'objet
+            req.send(identite);
+            console.log(req);
+            setTimeout(function(){  
+                 document.location.reload(true); 
+            }, 300);
+       }
+    }
+</script>
