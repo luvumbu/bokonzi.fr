@@ -4,13 +4,11 @@ $(function() {
     var slice_size = 1000 * 1024; // Taille de chaque segment
     function start_upload(event) {
         event.preventDefault();
-
         reader = new FileReader();
         file = document.querySelector('#file-input').files[0];
 
         upload_file(0);
     }
-
     $('#submit-button').on('click', start_upload);
 
     function upload_file(start) {
@@ -48,13 +46,7 @@ $(function() {
                         $('#upload-progress').html('Upload Complete!'); 
                         setTimeout(function(){
                             $('#upload-progress').html(''); 
-                             }, 10000);      
-                       
-
-
-                        
-
-
+                             }, 10000);
                     }
                 }
             });

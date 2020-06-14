@@ -48,7 +48,7 @@ if ($result->num_rows > 0) {
       ?>
 <div id="options" style="margin-bottom:30px"></div> 
         <div style="position:relative">
-        <div class="cross"> X</div>
+        <div class="cross" onclick="remove_img(this)" title="<?php echo $myform_id.''?>"> X</div>
         <img src="<?php echo $myform_source.'.jpg' ?>" class="img-fluid" alt="Responsive image">
     </div>
   <div class="margin-bottom-100px"></div> 
@@ -101,6 +101,9 @@ if ($result->num_rows > 0) {
 if( $titre_questions_source!="") {
  ?>
   <img src="<?php echo $titre_questions_source.'.jpg' ?>" style="width:30%;margin-bottom:50px" alt="Responsive image">
+  <div class="position:relative;margin-bottom:50px">
+    <i class="fa fa-remove cross2 titre_questions_source" onclick="remove_img(this)" title="<?php echo  $titre_questions_id_?>"></i>
+  </div>
   <?php
   }
     // Create connection
@@ -129,18 +132,23 @@ if ($resultono->num_rows > 0) {
                 </div>
                 <input type="text" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"  onkeyup="update_source(this)" class="form-control titres_data" aria-label="Text input with radio" placeholder="Votre titre">               
               </div>
-          <div>
-                <i class="fa fa-remove fa-remove1 remove_type_data" onclick="remove_form(this)" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"></i>
-                 <button type="button"     title="<?php echo $titres_data_id_ ?>"     value="add_picture_data"  onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img_all"><i class="fa fa-file-image-o"></i></button> 
-          </div>   
+ 
 
       <?php 
       if($titres_data_source!="") {
         ?>
         <img src="<?php echo $titres_data_source.'.jpg' ?>" style="width:15%;margin-bottom:50px" alt="Responsive image">
+        <div>
+        <i class="fa fa-remove cross2 titres_data_source" onclick="remove_img(this)" title="<?php echo   $titres_data_id_ ?>"></i>
+        </div>
         <?php 
       }
-
+?>
+          <div>
+                <i class="fa fa-remove fa-remove1 remove_type_data" onclick="remove_form(this)" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"></i>
+                 <button type="button"     title="<?php echo $titres_data_id_ ?>"     value="add_picture_data"  onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img_all"><i class="fa fa-file-image-o"></i></button> 
+          </div>  
+<?php 
     }
     else {
       ?>
@@ -158,7 +166,10 @@ if ($resultono->num_rows > 0) {
             {
               ?>
               <img src="<?php echo $titres_data_source.'.jpg' ?>" style="width:15%;margin-bottom:50px" alt="Responsive image">
-             
+              <div style="position: relative;">
+              <i class="fa fa-remove cross2 titres_data_source" onclick="remove_img(this)" title="<?php echo   $titres_data_id_ ?>"></i>
+              </div>
+              
              <?php 
             }
        ?>     
@@ -188,7 +199,8 @@ $conn->close();
                 <button type="button"     title="<?php echo $myform_id ?>"     value="add_picture_form"  onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img_all"><i class="fa fa-file-image-o"></i></button>  
                 <button type="button"     title="<?php echo $add_form?>"        onclick="add_myForms(this)"     id="<?php echo $add_form.$myform_id?>"      class="btn btn-secondary add_form" onclick="addData() " style="background-color:#44ba79;margin-left:200px;padding:15px">    <i class="fa fa-plus-square"></i></button>    
                 <button type="button"     title="<?php echo $myform_id?>"       onclick="remove_form(this)"      id="<?php echo $myform_id?>"                class="btn btn-secondary remove_form" onclick="addData() " style="background-color:#ba4444;margin-left:200px;padding:15px">    <i class="fa fa-close"></i></button>               
-          </div>          
+     
+              </div>          
     </div> 
 <style>
 .style1 {
@@ -229,6 +241,20 @@ $conn->close();
 .margin-bottom {
   margin-bottom : 130px; 
 }
+.cross2 {
+  background-color: red;
+  padding: 20px;
+  color: white;
+  position: relative; 
+  right: 0;
+  top: 0;
+  margin-bottom:50px;
+}
+.cross2:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
     @media screen and (max-width: 1024px) {
       .style1 {
         width : 80%;

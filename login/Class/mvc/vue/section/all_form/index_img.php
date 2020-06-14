@@ -89,6 +89,9 @@ function submit_button()
 function ifram_img() 
 {  
     document.getElementById("dowload_img").className="dowload_img_display_none";
+    setTimeout(function(){            
+      Ajax2("myForms","class/mvc/vue/section/all_form/myForms.php")                           
+        }, 100);    
 }
 </script>
 
