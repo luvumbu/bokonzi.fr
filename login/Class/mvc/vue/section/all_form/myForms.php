@@ -87,8 +87,11 @@ if ($result->num_rows > 0) {
                         <div class="btn-group mr-2" role="group" aria-label="First group">                          
                           
                           <button onclick="add_myForms(this)"   id="<?php echo  $titre_questions_id_ ?>"     title="<?php echo $titre_questions_id_.''?>" type="button" class="btn btn-secondary plus_" style="background-color:#44ba79"><i class="fa fa-plus-circle" ></i></i></button>                          
+                          <button onclick="update_source(this)"   id="<?php echo  $titre_questions_id_.'5' ?>"   title="<?php echo $titre_questions_id_ .''?>"     type="button" class="btn btn-secondary text_"><i class="fa fa-file-text-o"></i></button>
                           <button onclick="update_source(this)"   id="<?php echo  $titre_questions_id_.'2' ?>"   title="<?php echo $titre_questions_id_ .''?>"     type="button" class="btn btn-secondary square_"><i class="fa fa-check-square"></i></button>
                           <button onclick="update_source(this)"   id="<?php echo  $titre_questions_id_.'3' ?>"   title="<?php echo $titre_questions_id_ .''?>"     type="button" class="btn btn-secondary circle_"><i class="fa fa-dot-circle-o"></i></button>
+                          <button onclick="update_source(this)"   id="<?php echo  $titre_questions_id_.'6' ?>"   title="<?php echo $titre_questions_id_ .''?>"     type="button" class="btn btn-secondary select_"><i class="fa fa-caret-square-o-down"></i></button>
+ 
                           <button onclick="toggle_img_on(this)"  value="add_picture_title"       id="<?php echo $fa_file_image_o.$titre_questions_id_ .''?>"   title="<?php echo $titre_questions_id_ .''?>"     type="button" class="btn btn-secondary image_"><i class="fa fa-file-image-o"></i></button>   
                           <button onclick="remove_form(this)"    id="<?php echo  $titre_questions_id_.'4'?>"       title="<?php echo $titre_questions_id_ .''?>"     type="button" class="btn btn-secondary close_" style="background-color:#ba4444;margin-left:50px"><i class="fa fa-close"></i></i></i></button>   
                          <div id="<?php echo $titre_questions_id_."x" ?>" class="<?php echo $titre_questions_id_ ?>"> </div>
