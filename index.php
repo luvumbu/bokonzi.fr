@@ -12,7 +12,6 @@
 </head>
 <body>        
     <?php
-    echo "test ok";
           require("app.php");     
           require("links.php");       
     ?>
