@@ -121,8 +121,7 @@ if ($resultx2->num_rows > 0) {
                        </div> 
                     <i class="fa fa-remove fa-remove1 remove_type_data" onclick="remove_form(this)"  value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"></i>
 
-                        <?php 
-
+                        <?php
                     switch ($titres_data_source) {
                       case "text":
                         ?>
