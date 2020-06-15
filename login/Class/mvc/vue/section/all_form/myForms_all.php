@@ -154,6 +154,21 @@ $connx1->close();
 .cross2:hover {
   cursor: pointer;
 }
+.type-source {
+padding:15px;font-size:2em;
+}
+.type-source {
+padding: 15px;
+margin: 15px;
+background-color: #bab8cf;
+color:white ;
+border:1px solid rgba(0,0,0,0.2);
+text-shadow: 1px 1px 1px black;
+}
+.type-source:hover {
+cursor: pointer;
+
+}
 @media screen and (max-width: 1024px)
 {
   .style1 {

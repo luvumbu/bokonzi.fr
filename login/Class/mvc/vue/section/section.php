@@ -47,8 +47,6 @@ function remove_img(this_)
 var identite = new FormData();
 identite.append("id", this_.title);
 var req = new XMLHttpRequest();
-
-
    switch (this_.className) {
   case "cross": 
   req.open("POST", "class/mvc/model/remove/remove_img_form.php");

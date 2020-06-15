@@ -53,6 +53,7 @@ if ($resultono->num_rows > 0) {
     $titres_data_id_ = $rowono["titres_data_id"];    
     $titres_data_titre= $rowono["titres_data_titre"];
     $titres_data_source = $rowono["titres_data_source"];
+    $titres_data_type= $rowono["titres_data_type"];
     $encrementation= 0;
     
     switch ($titre_questions_type) {
@@ -124,7 +125,26 @@ if ($resultono->num_rows > 0) {
           <li>
           <input type="text" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"  onkeyup="update_source(this)" class="form-control titres_data" aria-label="Text input with radio" placeholder="Votre titre">               
           </li>
-        <?php 
+        <?php         
+            switch ($titres_data_type) {
+              case "":
+               ?>
+               <div style="margin-top:20px;margin-bottom:20px;display:flex">
+                 <div><i class="fa fa-file-text type-source"></i></div>
+                 <div><i class="fa fa-image type-source"></i></div>
+                 <div><i class="fa fa-link type-source"></i></div>
+               </div>
+                <?php 
+                break;
+              case "blue":
+                echo "Your favorite color is blue!";
+                break;
+              case "green":
+                echo "Your favorite color is green!";
+                break;
+              default:
+                echo "Your favorite color is neither red, blue, nor green!";
+            }
         $encrementation ++;
         break;
         case "select":

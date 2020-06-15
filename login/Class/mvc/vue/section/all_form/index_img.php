@@ -38,8 +38,7 @@ function submit_button()
 </script>
 <style>
 
-.block1 
-{
+.block1 {
     background-color:rgba(0,0,0,0.6) ; 
     position:fixed ; 
     width:100%; 
@@ -83,9 +82,7 @@ function submit_button()
    display:block;
 }
 </style>
-
 <script>
-
     // apparence du fichier d'ajout des image 
 function ifram_img() 
 {  
