@@ -5,17 +5,11 @@ $email_ = $_POST["email"] ;
 $password_ = $_POST["password"];
 if($_SESSION["ip"]=="::1") {
 // si nous sommes en local 
-  $servername = "localhost";
-  $username = "root";
-  $password = "root";
-  $dbname = "bkz_all";
+include("bdd_local.php") ;
 }
 else {
 // si nous sommes en network
-  $servername = "localhost";
-  $username = "u510206436_bkz_all";
-  $password = "v3p9r3e@59A";
-  $dbname = "u510206436_bkz_all";
+include("bdd_network.php") ;
 }
   $_SESSION["email"] = $email_ ; 
   $_SESSION["password"] = $password_;

@@ -5,17 +5,11 @@ $email_ = $_POST["email"] ;
 $password_ = $_POST["password"];
 if($_SESSION["ip"]=="::1")
 {
-  $servername = "localhost";
-  $username = "root";
-  $password = "root";
-  $dbname = "bkz_all";
+include("bdd_local.php") ;
 }
 else 
 {
-  $servername = "localhost";
-  $username = "u510206436_bkz_all";
-  $password = "v3p9r3e@59A";
-  $dbname = "u510206436_bkz_all";
+include("bdd_network.php") ;
 }
 $_SESSION["email"] = $email_ ; 
 $_SESSION["password"] = $password_;
@@ -42,8 +36,7 @@ $_SESSION["info"] ="Adresse mail existante ! " ;
 $_SESSION["ON"] ="I_ON"; 
   }
 } else {
-    $_SESSION["info"] ="Inscription reussi" ; 
-  
+    $_SESSION["info"] ="Inscription reussi";  
     $_SESSION["login_id"] =  $row["login_id"];
     $_SESSION["login_mail"] = $email_ ; 
     $_SESSION["login_password"]= $password_ ; 
