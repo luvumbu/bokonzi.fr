@@ -109,7 +109,8 @@ if ($connx2->connect_error) {
 
 $sqlx2 = 'SELECT * FROM `titres_data` WHERE titres_data_id_questions_id="'.$titre_questions_id_.'"';
 $resultx2 = $connx2->query($sqlx2);
-
+echo "<ol>";
+$encrementation =0;
 if ($resultx2->num_rows > 0) {
   // output data of each row
   while($rowx2 = $resultx2->fetch_assoc()) {
@@ -117,6 +118,7 @@ if ($resultx2->num_rows > 0) {
     $titres_data_id_ = $rowx2["titres_data_id"];    
     $titres_data_titre= $rowx2["titres_data_titre"];
     $titres_data_source= $rowx2["titres_data_source"];
+    
 
 
 
@@ -184,9 +186,22 @@ if ($resultx2->num_rows > 0) {
                   </div> 
               <?php 
         break;
-      case "green":
-        echo "Your favorite color is green!";
-        break;
+        case "text":
+          ?>       
+            <li>
+            <input type="text" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"  onkeyup="update_source(this)" class="form-control titres_data" aria-label="Text input with radio" placeholder="Votre titre">               
+            </li>
+          <?php 
+        
+          break;
+          case "select":
+            ?>       
+              <li>
+              <input type="text" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"  onkeyup="update_source(this)" class="form-control titres_data" aria-label="Text input with radio" placeholder="Votre titre">               
+              </li>
+            <?php 
+           
+            break;
       default:
         echo "Your favorite color is neither red, blue, nor green!";
     }
@@ -203,13 +218,14 @@ if ($resultx2->num_rows > 0) {
 
 
 
-
+    $encrementation ++;
 
         
   }
 } else {
   echo "";
 }
+echo "</ol>";
 $connx2->close();
   }
 } else {

@@ -120,11 +120,16 @@ $resultono = $connono->query($sqlono);
 
 if ($resultono->num_rows > 0) {
   // output data of each row
+  echo "<ol>";
   while($rowono = $resultono->fetch_assoc()) {
     $titres_data_id_ = $rowono["titres_data_id"];    
     $titres_data_titre= $rowono["titres_data_titre"];
     $titres_data_source = $rowono["titres_data_source"];
+    $encrementation= 0;
+
+    
     switch ($titre_questions_type) {
+      
       case "square":
         
         ?>
@@ -187,15 +192,31 @@ if ($resultono->num_rows > 0) {
                   </div> 
               <?php 
         break;
-      case "green":
-        echo "Your favorite color is green!";
+      case "text":
+        ?>       
+          <li>
+          <input type="text" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"  onkeyup="update_source(this)" class="form-control titres_data" aria-label="Text input with radio" placeholder="Votre titre">               
+          </li>
+        <?php 
+        $encrementation ++;
         break;
+        case "select":
+          ?>       
+            <li>
+            <input type="text" value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"  onkeyup="update_source(this)" class="form-control titres_data" aria-label="Text input with radio" placeholder="Votre titre">               
+            </li>
+          <?php 
+          $encrementation ++;
+          break;
       default:
         echo "Your favorite color is neither red, blue, nor green!";
     }
   }
-} else {
+} 
+
+else {
 }
+echo "</ol>";
 $connono->close();
 ?>
 
