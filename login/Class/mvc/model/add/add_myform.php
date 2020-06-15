@@ -2,38 +2,14 @@
 session_start() ; 
 header("Access-Control-Allow-Origin: *");
 $servername = "localhost";
-
 // Create connection
 echo "Connected successfully";
-
-
-
-
-
-
-
-
-
-
-
-            $servername =$_SESSION["servername"] ; 
-            $password = $_SESSION["password"] ;
-            $dbname =$_SESSION["dbname"] ;
-            $username=$_SESSION["username"] ; 
-
-
-
- 
-
-
-            $id =$_SESSION["login_id"] ; 
-            echo $id; 
-
-
-
-
-
-
+$servername =$_SESSION["servername"] ; 
+$password = $_SESSION["password"] ;
+$dbname =$_SESSION["dbname"] ;
+$username=$_SESSION["username"] ; 
+$id =$_SESSION["login_id"] ; 
+echo $id; 
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
@@ -48,24 +24,13 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
 $conn->close();
-
-
-?>
-
-
-<?php
- 
-
- $servername =$_SESSION["servername"] ; 
- $password = $_SESSION["password"] ;
- $dbname =$_SESSION["dbname"] ;
- $username=$_SESSION["username"] ; 
- $ip =  $_SESSION["ip"]  ; 
- $id =$_SESSION["login_id"]; 
-
-
+$servername =$_SESSION["servername"] ; 
+$password = $_SESSION["password"] ;
+$dbname =$_SESSION["dbname"] ;
+$username=$_SESSION["username"] ; 
+$ip =  $_SESSION["ip"]  ; 
+$id =$_SESSION["login_id"]; 
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {

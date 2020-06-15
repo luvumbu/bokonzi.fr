@@ -51,6 +51,7 @@ if ($result->num_rows > 0) {
   
     $_SESSION["info"] ="Error" ; 
     $_SESSION["ON"] ="C_OFF"; 
+
 }
 $conn->close();
 ?>

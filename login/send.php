@@ -11,7 +11,6 @@ function decode_chunk($data) {
     }
     return $data;
 }
-
 $file_path = 'uploads/'.$_SESSION["login_id"].'/'.$_SESSION["toggle_img_name"].'.jpg';
 $file_data = decode_chunk($_POST['file_data']);
 if (false === $file_data) {
