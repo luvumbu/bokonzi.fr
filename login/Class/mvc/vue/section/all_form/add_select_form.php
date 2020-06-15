@@ -54,8 +54,7 @@ if ($resultono->num_rows > 0) {
     $titres_data_titre= $rowono["titres_data_titre"];
     $titres_data_source = $rowono["titres_data_source"];
     $titres_data_type= $rowono["titres_data_type"];
-    $encrementation= 0;
-    
+    $encrementation= 0;    
     switch ($titre_questions_type) {
       
       case "square":
@@ -128,13 +127,41 @@ if ($resultono->num_rows > 0) {
         <?php         
             switch ($titres_data_type) {
               case "":
+               
                ?>
-               <div style="margin-top:20px;margin-bottom:20px;display:flex">
-                 <div><i class="fa fa-file-text type-source"></i></div>
-                 <div><i class="fa fa-image type-source"></i></div>
-                 <div><i class="fa fa-link type-source"></i></div>
-               </div>
+                     
+                       <div style="margin-top:20px;margin-bottom:20px;display:flex">
+                         <div><i class="fa fa-file-text type-source" title="<?php echo $titres_data_id_ ?>" onclick="titres_data_type(this)"></i></div>
+                         <div><i class="fa fa-image type-source"     title="<?php echo $titres_data_id_ ?>" onclick="titres_data_type(this)"></i></div>
+                         <div><i class="fa fa-link type-source"      title="<?php echo $titres_data_id_ ?>" onclick="titres_data_type(this)"></i></div>
+                       </div>
+                    <i class="fa fa-remove fa-remove1 remove_type_data" onclick="remove_form(this)"  value="<?php echo   $titres_data_titre ?>"  title="<?php echo   $titres_data_id_ ?>"></i>
+                       
                 <?php 
+
+                    
+          switch ($titres_data_source) {
+            case "text":
+              ?>
+              <i class="fa fa-file-text type-source"></i> 
+              <?php 
+              break;
+            case "image":
+              ?>
+              <i class="fa fa-image type-source"></i> 
+              <?php 
+              break;
+            case "link":
+              ?>
+              <i class="fa fa-link type-source"></i> 
+              <?php 
+              break;
+            default:
+            ?>
+            <i class="fa fa-file-text type-source"></i> 
+            <?php 
+          }
+
                 break;
               case "blue":
                 echo "Your favorite color is blue!";

@@ -72,4 +72,32 @@ req.send(identite);
 console.log(req);
 }
 
+
+function titres_data_type(this_) {
+// Création d'un objet FormData
+var identite = new FormData();
+// Ajout d'information dans l'objet
+// Création et configuration d'une requête HTTP POST vers le fichier post_form.php
+var req = new XMLHttpRequest();
+req.open("POST", "php.php");
+identite.append("id",this_.title);
+  switch(this_.className) {
+  case "fa fa-file-text type-source":
+  identite.append("titres_data_source", "text");
+    break;
+  case "fa fa-image type-source":
+  identite.append("titres_data_source", "image");  
+    break;
+    case "fa fa-link type-source":
+  identite.append("titres_data_source", "link");     
+    break;
+  default:
+   
+}
+req.open("POST", "class/mvc/model/update/update_data_source.php");
+req.send(identite);
+console.log(req);
+nomUrl();
+
+}
 </script>
