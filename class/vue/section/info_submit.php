@@ -6,13 +6,11 @@ if(isset( $_SESSION["info"]))
 $info_ = $_SESSION["ON"];
 switch ($info_) {
   case "C_ON":
-    echo '<div class="alert alert-success" role="alert"><meta http-equiv="refresh" content="2;URL=login/index.php">
+    echo '<div class="alert alert-success" role="alert"><meta http-equiv="refresh" content="0;URL=login/index.php">
     Succes
   </div>';
     break;
   case "C_OFF":
-
-
   echo '<div class="alert alert-danger" role="alert">
   Erreur de connection
  </div>';
@@ -27,7 +25,6 @@ switch ($info_) {
       Inscription reussi
       </div>';
     break;
-
 }
 }
 

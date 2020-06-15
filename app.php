@@ -17,4 +17,4 @@
   include("class/vue/footer/footer.php");        
 ?>
 </footer>
- <script src="class/controller/js.js"></script> 
+
