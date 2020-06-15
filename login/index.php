@@ -11,8 +11,8 @@
 </head>
 <body>
   <?php  
-    if(isset($_SESSION["ON"])) {            
-      include("class/app.php");                                
+    if(isset($_SESSION["ON"])) {      
+          include("class/app.php");                                
     }     
     else {
       header('Location: ../index.php');
