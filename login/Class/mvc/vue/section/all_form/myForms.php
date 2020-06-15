@@ -37,6 +37,7 @@ if ($result->num_rows > 0) {
    $myform_description_ = $row["myform_description"];
    $myform_source=   $row["myform_source"];
    $myform_id = $row["myform_id"] ; 
+   $myform_visibility = $row["myform_visibility"] ; 
     ?>
 <input value="<?php echo $myform_title_.''?>" title="<?php echo $myform_id ?>"                onkeyup="update_myForms(this)"  class="form-control form-control-lg titre" type="text" placeholder="Titre sans nom"     id="<?php echo $titre.$myform_id ?>">
 <input value="<?php echo $myform_description_.''?>"  title="<?php echo $myform_id ?>"         onkeyup="update_myForms(this)"  class="form-control form-control-lg description" type="text" placeholder="Déscription"  id="<?php echo $description.$myform_id ?>">
@@ -82,11 +83,45 @@ $conn->close();
                 <div title="<?php echo $myform_id ?>"  id="id_number"  ></div>
                 <button type="button"     title="<?php echo $add_form?>"        onclick="add_myForms(this)"     id="<?php echo $add_form.$myform_id?>"      class="btn btn-secondary add_form" onclick="addData() ">    <i class="fa fa-plus-square"></i></button>    
                 <button type="button"     title="<?php echo $myform_id ?>"     value="add_picture_form"  onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  class="btn btn-secondary form_img_all"><i class="fa fa-file-image-o"></i></button>  
-                <button type="button"     title="<?php echo $myform_id?>"       onclick="remove_form(this)"      id="<?php echo $myform_id?>"                class="btn btn-secondary remove_form" onclick="addData()">    <i class="fa fa-close"></i></button>               
+               
+               
+               
+               
+               
+               <?php 
+                if($myform_visibility=="public") {
+?>
+                <button type="button"     title="<?php echo $myform_id?>"       onclick="toggle_activation(this)"      id="<?php echo $myform_id?>"                class="btn btn-secondary public" onclick="addData()">    <i class="fa fa-eye"></i></button>     
+
+<?php 
+                }
+                else {
+                 ?>
+                  <button type="button"     title="<?php echo $myform_id?>"       onclick="toggle_activation(this)"      id="<?php echo $myform_id?>"                class="btn btn-secondary private" onclick="addData()">    <i class="fa fa-eye-slash"></i></button>
+                <?php 
+                }
+                ?>
+               
+               
+                <button type="button"     title="<?php echo $myform_id?>"       onclick="remove_form(this)"      id="<?php echo $myform_id?>"                class="btn btn-secondary remove_form" onclick="addData()">    <i class="fa fa-close"></i></button>
+                          
      
               </div>          
     </div> 
 <style>
+
+  .public {
+background-color: #b3e3ae ; 
+  }
+  .public:hover {
+background-color: #b3e3ae ; 
+  }
+  .private {
+    background-color:#e3aeb4;
+  }
+  .private:hover {
+    background-color:#e3aed1;
+  }
   .add_form {
     background-color:#44ba79;margin-left:200px;padding:15px
   }

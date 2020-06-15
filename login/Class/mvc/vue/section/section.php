@@ -98,6 +98,26 @@ req.open("POST", "class/mvc/model/update/update_data_source.php");
 req.send(identite);
 console.log(req);
 nomUrl();
+}
 
+
+function toggle_activation(this_) {
+
+var identite = new FormData();
+// Ajout d'information dans l'objet
+if(this_.className=="btn btn-secondary public") {
+  identite.append("id", this_.id);
+  identite.append("name","private");
+}
+else {
+  identite.append("id", this_.id);
+  identite.append("name", "public");
+}
+var req = new XMLHttpRequest();
+req.open("POST", "class/mvc/model/update/toggle_activation.php");
+// Envoi de la requête en y incluant l'objet
+req.send(identite);
+console.log(req); 
+nomUrl();
 }
 </script>
