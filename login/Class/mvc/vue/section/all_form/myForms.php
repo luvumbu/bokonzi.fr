@@ -134,17 +134,14 @@ $conn->close();
   margin-bottom : 130px; 
 }
 .cross2 {
-  background-color: red;
-  padding: 20px;
+  background-color: #ba4444;
   color: white;
-  position: relative; 
-  right: 0;
-  top: 0;
-  margin-bottom:50px;
+  text-shadow: 1px 1px 1px black;
+  padding: 15px;
+  margin-bottom: 50px;
 }
 .cross2:hover {
   cursor: pointer;
-  opacity: 0.5;
 }
     @media screen and (max-width: 1024px) {
       .style1 {

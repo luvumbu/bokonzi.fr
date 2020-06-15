@@ -144,6 +144,16 @@ $connx1->close();
 .margin-bottom {
   margin-bottom : 130px; 
 }
+.cross2 {
+  background-color: #ba4444;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  padding: 15px;
+  margin-bottom: 50px;
+}
+.cross2:hover {
+  cursor: pointer;
+}
 @media screen and (max-width: 1024px)
 {
   .style1 {

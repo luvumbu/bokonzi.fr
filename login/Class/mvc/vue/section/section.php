@@ -5,6 +5,22 @@
 ?>
 <div id="myForms"></div>
 <script>
+
+function nomUrl() {
+  var taille = window.location.href.length-1 ;
+var lastStringurl=window.location.href[taille];
+
+if(lastStringurl==1) {
+  setTimeout(function(){            
+      Ajax2("myForms","class/mvc/vue/section/all_form/myForms.php")                           
+        }, 100);  
+}
+else {  
+  setTimeout(function(){            
+      Ajax2("myForms","class/mvc/vue/section/all_form/myForms_all.php")                           
+        }, 100);  
+}
+}
 function toggle_img_on(this_) 
 {
     
@@ -47,9 +63,11 @@ var req = new XMLHttpRequest();
     break;
     
 }
-      setTimeout(function(){            
-      Ajax2("myForms","class/mvc/vue/section/all_form/myForms.php")                           
-        }, 100);  
+//alert(window.location.href) ; 
+// alert(window.location.href.length);
+
+nomUrl();
+
 
 // Envoi de la requête en y incluant l'objet
 req.send(identite);

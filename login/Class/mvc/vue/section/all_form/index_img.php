@@ -29,9 +29,10 @@ function submit_button()
     // Création et configuration d'une requête HTTP POST vers le fichier post_form.php
     var req = new XMLHttpRequest();
     req.open("POST", "class/mvc/model/update/update_info_img.php");
-    // Envoi de la requête en y incluant l'objet
+    
     req.send(identite);
     console.log(req);
+    nomUrl();
 }
 
 </script>
