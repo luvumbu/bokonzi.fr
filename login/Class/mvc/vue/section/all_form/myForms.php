@@ -146,7 +146,6 @@ $conn->close();
   cursor: pointer;
   opacity: 0.5;
 }
-
     @media screen and (max-width: 1024px) {
       .style1 {
         width : 80%;
