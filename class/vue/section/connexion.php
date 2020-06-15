@@ -1,7 +1,7 @@
 <div class="bkz-width-50pc">
   <h1 class="connexion">
-  Connexion
-</h1>
+    Connexion
+  </h1>
 <form>
   <div class="form-group">
     <label for="mail1">Email address</label>
