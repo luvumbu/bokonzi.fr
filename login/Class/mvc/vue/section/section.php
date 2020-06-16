@@ -1,7 +1,5 @@
 <?php 
     include("class/mvc/vue/section/section.html");
-   // $_SESSION["aleatoire"]
-   // $_SESSION["login_id"] ;
 ?>
 <div id="myForms"></div>
 <script>
@@ -99,8 +97,6 @@ req.send(identite);
 console.log(req);
 nomUrl();
 }
-
-
 function toggle_activation(this_) {
 
 var identite = new FormData();
