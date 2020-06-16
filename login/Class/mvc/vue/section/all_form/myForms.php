@@ -102,7 +102,7 @@ $conn->close();
                 }
                 ?>
                
-               
+          
                 <button type="button"     title="<?php echo $myform_id?>"       onclick="remove_form(this)"      id="<?php echo $myform_id?>"                class="btn btn-secondary remove_form" onclick="addData()">    <i class="fa fa-close"></i></button>
                           
      

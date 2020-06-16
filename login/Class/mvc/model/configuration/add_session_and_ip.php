@@ -1,11 +1,11 @@
 <?php
-            //Récuperation des variables 
 $servername =$_SESSION["servername"] ; 
 $password = $_SESSION["password"] ;
 $dbname =$_SESSION["dbname"] ;
 $username=$_SESSION["username"] ; 
 $ip =  $_SESSION["ip"]  ; 
 $id =$_SESSION["login_id"] ;  
+
 $login_password=$_SESSION["login_password"] ;
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection

@@ -41,6 +41,7 @@ if ($result->num_rows > 0) {
     $myform_source=   $row["myform_source"];
     $myform_id = $row["myform_id"];
     $myform_source=   $row["myform_source"];
+    $myform_visibility = $row["myform_visibility"] ; 
     ?>
     <input value="<?php echo $myform_title_.''?>" title="<?php echo $myform_id ?>"                onkeyup="update_myForms(this)"  class="form-control form-control-lg titre" type="text" placeholder="Titre sans nom"     id="<?php echo $titre.$myform_id ?>">
     <input value="<?php echo $myform_description_.''?>"  title="<?php echo $myform_id ?>"         onkeyup="update_myForms(this)"  class="form-control form-control-lg description" type="text" placeholder="Déscription"  id="<?php echo $description.$myform_id ?>">
@@ -81,10 +82,26 @@ if ($resultx1->num_rows > 0) {
 $connx1->close();
 ?>
 <div class="btn-group" role="group" aria-label="Basic example">  
+
                 <div title="<?php echo $myform_id ?>"  id="id_number"  ></div>
-                <button type="button"     title="<?php echo $add_form?>"        onclick="add_myForms(this)"     id="<?php echo $add_form.$myform_id?>"      class="btn btn-secondary add_form" onclick="addData() ">    <i class="fa fa-plus-square"></i></button>    
-                <button type="button"     title="<?php echo $myform_id ?>"      onclick="toggle_img_on(this)"          id="<?php echo $add_picture.$myform_id ?>"  value="add_picture_form" class="btn btn-secondary form_img"><i class="fa fa-file-image-o"></i></button>  
-                <button type="button"     title="<?php echo $myform_id?>"       onclick="remove_form(this)"      id="<?php echo $myform_id?>"                class="btn btn-secondary remove_form" onclick="addData() ">    <i class="fa fa-close"></i></button>               
+                <button type="button"     title="<?php echo $myform_id ?>"        onclick="add_myForms_all(this)"     id="<?php echo $add_form.$myform_id?>"      class="btn btn-secondary add_form" onclick="addData() ">    <i class="fa fa-plus-square"></i></button>    
+                <button type="button"     title="<?php echo $myform_id ?>"      onclick="toggle_img_on_all(this)"          id="<?php echo $add_picture.$myform_id ?>"  value="add_picture_form" class="btn btn-secondary form_img"><i class="fa fa-file-image-o"></i></button>  
+                <?php 
+                if($myform_visibility=="public") {
+?>
+                <button type="button"     title="<?php echo $myform_id?>"       onclick="toggle_activation(this)"      id="<?php echo $myform_id?>"                class="btn btn-secondary public" onclick="addData()">    <i class="fa fa-eye"></i></button>     
+
+<?php 
+                }
+                else {
+                 ?>
+                  <button type="button"     title="<?php echo $myform_id?>"       onclick="toggle_activation(this)"      id="<?php echo $myform_id?>"                class="btn btn-secondary private" onclick="addData()">    <i class="fa fa-eye-slash"></i></button>
+                <?php 
+                }
+                ?>
+        
+                <button type="button"     title="<?php echo $myform_id?>"       onclick="remove_form(this)"      id="<?php echo $myform_id?>"                class="btn btn-secondary remove_form" onclick="addData() ">    <i class="fa fa-close"></i></button>  
+                <a href="<?php echo 'forms.php/'.$myform_id; ?>">Lien</a>
           </div>
   <?php   
   }
@@ -157,6 +174,19 @@ $connx1->close();
 .type-source {
 padding:15px;font-size:2em;
 }
+.type-source {
+padding: 15px;
+margin: 15px;
+background-color: #bab8cf;
+color:white ;
+border:1px solid rgba(0,0,0,0.2);
+text-shadow: 1px 1px 1px black;
+}
+.type-source:hover {
+cursor: pointer;
+
+}
+
 .type-source {
 padding: 15px;
 margin: 15px;

@@ -116,4 +116,28 @@ req.send(identite);
 console.log(req); 
 nomUrl();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+function add_myForms_all(this_) {
+ // Création d'un objet FormData
+var identite = new FormData();
+
+identite.append("idform", this_.title);
+var req = new XMLHttpRequest();
+req.open("POST", "class/mvc/model/update/update_myform_all.php");
+req.send(identite);
+nomUrl();
+}
+
 </script>
